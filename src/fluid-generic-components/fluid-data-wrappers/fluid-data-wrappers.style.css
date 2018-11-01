@@ -1,0 +1,25 @@
+/* CSS shared with editable and static data blocks */
+.ei-outer-block { 
+    display: block;
+    margin: 10px auto;
+}
+.ei-input-title {
+    color: rgb(40,40,40);
+    font-size: 1rem;
+}
+.ei-input-block {
+    width: 100%;
+}
+.ei-input {
+    display: block;
+    transition: all .2s ease 0s;
+    border: 1px solid rgba(200,200,200,0);
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 1px;
+    box-shadow: 0px 1px 2px 1px rgba(0,0,0,0);
+    background-color: rgba(255,255,255,0);
+    width: 100%;
+    border: 1px solid rgba(255,255,255,0);
+}

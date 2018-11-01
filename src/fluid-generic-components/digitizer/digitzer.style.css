@@ -1,0 +1,23 @@
+.digitizer {
+    display: block;
+    position: fixed;
+    
+    transition: background-color .3s ease 0s, max-height 0s linear .31s, top 0s linear .31s;
+
+    width: 100vw;
+    height: 100vh;
+
+    top: -1px;
+    left: 0;
+    max-height: 0vh;
+
+    background: rgba(255,255,255,0);
+}
+.digitizer.active {
+    transition: max-height 0s linear 0s, background-color .3s ease 0s;
+
+    max-height: 101vh;
+    top: 0px;
+    background: rgba(60,60,60,.9);
+    z-index: 500;
+}

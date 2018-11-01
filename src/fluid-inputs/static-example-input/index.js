@@ -1,0 +1,1 @@
+export { StaticExampleInput } from './static-example-input.component.js';
