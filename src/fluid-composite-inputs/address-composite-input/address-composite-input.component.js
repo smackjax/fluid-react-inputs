@@ -19,7 +19,9 @@ const validateAddressTwo=(addressTwo, currentVals)=>{
     return '';
 }
 const validateCity=(city, currentVals)=>{
-    return '';
+
+    return city.indexOf('nowhere') === -1 ? '' :
+        "You can't put that there!";
 }
 const validateState=(state, currentVals)=>{
     return '';
@@ -59,7 +61,7 @@ const AddressCompositeInput = (props)=>{
             />
             
             <FluidInputBlock
-            label='City'
+            label="City(don't put 'nowhere')"
             disableSaveOnTab={true}
             value={props.defaultValues.city || ''}
             saveKey={parentSaveKey + 'city'}

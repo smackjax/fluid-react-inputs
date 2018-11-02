@@ -1,13 +1,14 @@
 /* CSS shared with editable and static data blocks */
-.ei-placeholder { 
+.fi-placeholder { 
     display: block;
+    margin: 0px auto 40px;
+}
+.fi-label {
+    display: block;
+    width: 100%;
     margin: 10px auto;
 }
-
-.ei-input-block {
-    width: 100%;
-}
-.ei-input {
+.fi-input {
     display: block;
     transition: all .2s ease 0s;
     border: 1px solid rgba(200,200,200,0);
@@ -16,34 +17,33 @@
     padding: 5px;
     border-radius: 1px;
     box-shadow: 0px 1px 2px 1px rgba(0,0,0,0);
-    background-color: rgba(255,255,255,0);
+    background-color: rgba(255,255,255,.5);
     width: 100%;
     border: 1px solid rgba(255,255,255,0);
 }
-
-.ei-error-message {
-    display: none;
-   background: linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.9))
+.fi-input.static{
+    background-color: rgba(255,255,255,0);
+}
+.fi-error-msg {
+    color: rgb(255, 111, 111);
+    font-size: 1.2rem;
+    margin-bottom: 4px;
 }
 
 /* Styles when editing */
-.ei-inner-wrap.editing {
+.fi-inner-wrap.editing {
     z-index: 1000;
 }
-.ei-inner-wrap.editing .ei-label-text {
+.fi-inner-wrap.editing .fi-label-text {
     color: rgb(255,255,255);
 }
-.ei-inner-wrap.editing .ei-input {
+.fi-inner-wrap.editing .fi-input {
     box-shadow: 0px 2px 10px 1px rgba(0,0,0,.4);
     font-size: 22px;
     border: 1px solid rgba(220,220,220,1);
     background-color: rgba(255,255,255,.8);
 }
 
-.ei-inner-wrap.editing .error-message {
+.fi-inner-wrap.editing .fi-error-message {
     display: block;
-    color: rgb(230,100,100);
-    font-size: 1.2rem;
-    margin-bottom: 4px;
-    text-align: right;
 }

@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
+// No op function
+const doNothing = ()=>{};
+
 const initialState={
     editing: false,
     data: {},
@@ -57,7 +60,7 @@ const FluidLogicHOC = (WrappedComponent)=>{
             const lKey = e.key.toLowerCase();
             if(lKey === 'enter') return this.handleSave();
             if(lKey === 'tab'){
-                if(disableTab) return e.preventDefault();
+                if(this.state.errorMsg || disableTab) return e.preventDefault();
                 if(saveOnTab) return this.handleSave();
             }
         }
@@ -94,7 +97,7 @@ const FluidLogicHOC = (WrappedComponent)=>{
         }
 
         
-        doNothing = ()=>{}
+        
         render(){
             return (
                 <WrappedComponent
@@ -107,7 +110,7 @@ const FluidLogicHOC = (WrappedComponent)=>{
                 keyCheckDisabledTab={this.keyCheckDisabledTab}
                 keyCheckOnlyEnter={this.keyCheckOnlyEnter}
 
-                startEditing={!this.state.editing ? this.startEditing : this.doNothing}
+                startEditing={!this.state.editing ? this.startEditing : doNothing}
                 handleChange={this.handleChange}
                 handleSave={this.handleSave}
                 handleCancel={this.handleCancel}

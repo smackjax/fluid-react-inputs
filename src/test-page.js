@@ -24,6 +24,7 @@ class TestPage extends Component {
 
     // I nested the data object to demonstrate the dot notation
     updateData=(saveObj)=>{
+        console.log("SAVED VALS OBJ: ", saveObj);
         const updatedData = 
             unflatten({
                 ...flatten(this.state.data),
